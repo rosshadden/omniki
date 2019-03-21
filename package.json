@@ -1,7 +1,7 @@
 {
   "name": "ominiki",
   "version": "0.0.0",
-  "description": "Omniscient hotkey handler.",
+  "description": "Omniscient global hotkey handler.",
   "main": "dist/content.js",
   "scripts": {
     "build": "tsc && [ -d ./dist/bin ] && chmod -f +x ./dist/bin/* || exit 0",

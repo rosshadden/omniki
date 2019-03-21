@@ -8,7 +8,7 @@
 	"content_scripts": [
 		{
 			"matches": [
-				"<all_urls>"
+				"https://one.livesplit.org/*"
 			],
 			"js": [ "dist/content.js" ]
 		}
@@ -18,11 +18,11 @@
 		"persistent": false
 	},
 	"commands": {
-		"aoeu": {
-			"suggested_key": {
-				"default": "Alt+T"
-			},
-			"description": "Toggle feature foo"
+		"split": {
+			"description": "Start / Split"
+		},
+		"reset": {
+			"description": "Reset"
 		}
 	}
 }

@@ -1,6 +1,7 @@
 console.log('content');
-chrome.runtime.onMessage.addListener((req, sender, sendResponse) => {
-	if (req.message === 'foo') {
-		console.log('yes');
+chrome.runtime.onMessage.addListener(({ cmd }, sender, sendResponse) => {
+	if (cmd === 'split') {
+		const $splits = document.getElementsByClassName('splits')[0];
+		$splits.click();
 	}
 });
