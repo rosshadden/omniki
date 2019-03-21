@@ -2,6 +2,7 @@ chrome.commands.onCommand.addListener((cmd) => {
 	console.log('cmd', cmd);
 
 	chrome.tabs.query({ active: true, currentWindow: true }, ([ activeTab ]) => {
+		if (!activeTab) return;
 		console.log('activeTab', activeTab.id, activeTab.title);
 		chrome.tabs.sendMessage(activeTab.id, { cmd });
 	});
