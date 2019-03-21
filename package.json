@@ -1,0 +1,38 @@
+{
+  "name": "ominiki",
+  "version": "0.0.0",
+  "description": "Omniscient hotkey handler.",
+  "main": "dist/content.js",
+  "scripts": {
+    "build": "tsc && [ -d ./dist/bin ] && chmod -f +x ./dist/bin/* || exit 0",
+    "clean": "rm -rf ./dist",
+    "lint": "tslint -t stylish './src/**/*.ts' || exit 0",
+    "lint:verbose": "tslint -t codeFrame './src/**/*.ts' || exit 0",
+    "postinstall": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rosshadden/omniki.git"
+  },
+  "keywords": [
+    "chromium",
+    "chrome",
+    "extension",
+    "key",
+    "hotkey",
+    "global"
+  ],
+  "author": "Ross Hadden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rosshadden/omniki/issues"
+  },
+  "homepage": "https://github.com/rosshadden/omniki#readme",
+  "devDependencies": {
+    "@types/chrome": "0.0.81",
+    "tslint": "^5.14.0",
+    "typescript": "^3.3.4000"
+  }
+}
